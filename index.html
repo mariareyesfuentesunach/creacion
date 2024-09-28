@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Preguntas sobre la Creación según la Biblia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #e8f5e9;
+            border-left: 5px solid #4CAF50;
+        }
+        .reference {
+            font-style: italic;
+            color: #777;
+        }
+        .options {
+            margin-top: 10px;
+        }
+        .options button {
+            display: block;
+            margin: 5px 0;
+            padding: 10px;
+            width: 100%;
+            background-color: #f4f4f4;
+            border: 2px solid #4CAF50;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .options button.correct {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .options button.incorrect {
+            background-color: #f44336;
+            color: white;
+        }
+        .score {
+            margin: 20px 0;
+            text-align: center;
+            font-size: 18px;
+            color: #4CAF50;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>"Creación de la tierra"  <br>
+            Catequesis Infantil
+        </h1>
+        
+
+        <div id="quiz">
+            <div class="question">
+                <strong>1. ¿Cuántos días tardó Dios en crear los cielos y la tierra según el relato de Génesis?</strong>
+                <p class="reference">Referencia: Génesis 1:1-31</p>
+                <div class="options">
+                    <button onclick="checkAnswer(this, false)">A) 6 días</button>
+                    <button onclick="checkAnswer(this, true)">B) 7 días</button>
+                    <button onclick="checkAnswer(this, false)">C) 8 días</button>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong>2. ¿Qué creó Dios en el primer día de la creación?</strong>
+                <p class="reference">Referencia: Génesis 1:3-5</p>
+                <div class="options">
+                    <button onclick="checkAnswer(this, true)">A) La luz</button>
+                    <button onclick="checkAnswer(this, false)">B) La tierra</button>
+                    <button onclick="checkAnswer(this, false)">C) Los cielos</button>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong>3. ¿Qué diferencia hay entre la creación del hombre y la creación de los animales según Génesis?</strong>
+                <p class="reference">Referencia: Génesis 1:26-27</p>
+                <div class="options">
+                    <button onclick="checkAnswer(this, false)">A) Fueron creados el mismo día</button>
+                    <button onclick="checkAnswer(this, true)">B) El hombre fue creado a imagen de Dios</button>
+                    <button onclick="checkAnswer(this, false)">C) Los animales recibieron el soplo divino</button>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong>4. ¿Cómo se describe el estado de la tierra antes de que Dios comenzara la creación?</strong>
+                <p class="reference">Referencia: Génesis 1:2</p>
+                <div class="options">
+                    <button onclick="checkAnswer(this, false)">A) Estaba llena de vida</button>
+                    <button onclick="checkAnswer(this, true)">B) Estaba desordenada y vacía</button>
+                    <button onclick="checkAnswer(this, false)">C) Era completamente oscura</button>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong>5. ¿Qué significado tiene que el hombre fue creado "a imagen de Dios"?</strong>
+                <p class="reference">Referencia: Génesis 1:26-27</p>
+                <div class="options">
+                    <button onclick="checkAnswer(this, true)">A) Refleja su naturaleza y carácter</button>
+                    <button onclick="checkAnswer(this, false)">B) El hombre es divino</button>
+                    <button onclick="checkAnswer(this, false)">C) El hombre tiene el poder de crear vida</button>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong>6. ¿Qué bendición dio Dios a los seres humanos después de crearlos?</strong>
+                <p class="reference">Referencia: Génesis 1:28</p>
+                <div class="options">
+                    <button onclick="checkAnswer(this, true)">A) Ser fructíferos y llenar la tierra</button>
+                    <button onclick="checkAnswer(this, false)">B) Cuidar el jardín del Edén</button>
+                    <button onclick="checkAnswer(this, false)">C) Vivir eternamente</button>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong>7. ¿Por qué descansó Dios en el séptimo día?</strong>
+                <p class="reference">Referencia: Génesis 2:2-3</p>
+                <div class="options">
+                    <button onclick="checkAnswer(this, true)">A) Porque había terminado su obra</button>
+                    <button onclick="checkAnswer(this, false)">B) Porque necesitaba descansar</button>
+                    <button onclick="checkAnswer(this, false)">C) Porque la creación era imperfecta</button>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong>8. ¿Qué tarea le asignó Dios al hombre en el jardín del Edén?</strong>
+                <p class="reference">Referencia: Génesis 2:15</p>
+                <div class="options">
+                    <button onclick="checkAnswer(this, false)">A) Nombrar a los animales</button>
+                    <button onclick="checkAnswer(this, true)">B) Labrar y cuidar el jardín</button>
+                    <button onclick="checkAnswer(this, false)">C) Construir una ciudad</button>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong>9. ¿Cómo creó Dios a la mujer según el relato de la creación?</strong>
+                <p class="reference">Referencia: Génesis 2:21-22</p>
+                <div class="options">
+                    <button onclick="checkAnswer(this, true)">A) De la costilla de Adán</button>
+                    <button onclick="checkAnswer(this, false)">B) A partir del polvo de la tierra</button>
+                    <button onclick="checkAnswer(this, false)">C) De una palabra divina</button>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong>10. ¿Cuál fue la primera instrucción que Dios les dio a Adán y Eva sobre el árbol del conocimiento del bien y del mal?</strong>
+                <p class="reference">Referencia: Génesis 2:16-17</p>
+                <div class="options">
+                    <button onclick="checkAnswer(this, true)">A) No comer de su fruto</button>
+                    <button onclick="checkAnswer(this, false)">B) Proteger el árbol</button>
+                    <button onclick="checkAnswer(this, false)">C) Cosechar los frutos</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="score">
+            Puntuación: <span id="score">0</span> | Récord personal: <span id="highScore">0</span>
+        </div>
+    </div>
+
+    <footer>
+        &copy; Catequesis Infantil 2024|Parroquia del Señor de la Misericordia
+    </footer>
+
+    <script>
+        let score = 0;
+        let highScore = localStorage.getItem('highScore') || 0;
+        document.getElementById('highScore').textContent = highScore;
+
+        function checkAnswer(button, isCorrect) {
+            // Deshabilitar todos los botones de opciones después de seleccionar una respuesta
+            const options = button.parentNode.childNodes;
+            for (let option of options) {
+                if (option.tagName === 'BUTTON') {
+                    option.disabled = true;
+                    if (option === button) {
+                        option.classList.add(isCorrect ? 'correct' : 'incorrect');
+                    }
+                }
+            }
+
+            // Actualizar la puntuación
+            if (isCorrect) {
+                score++;
+            }
+            document.getElementById('score').textContent = score;
+
+            // Actualizar el récord personal
+            if (score > highScore) {
+                highScore = score;
+                localStorage.setItem('highScore', highScore);
+                document.getElementById('highScore').textContent = highScore;
+            }
+        }
+    </script>
+</body>
+</html>
